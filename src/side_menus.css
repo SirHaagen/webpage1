@@ -1,0 +1,61 @@
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.social_links, .up_button{
+  width: 40px;
+  background: linear-gradient(#555555, #000000);
+  border-radius: 15px;
+  position: fixed;
+  right: 0;
+  z-index: 5000;
+}
+
+.social_links{  
+  padding: 10px 0 3px 0;  
+  box-shadow: -3px 3px 10px #555555;
+  top: 60%;
+}
+.social_links div{
+  margin: 5px;
+  transition: all 0.5s;
+}
+.social_links div:hover,
+.up_button img:hover{
+  transform: scale(1.2);
+}
+.social_links div:active{
+  transform: scale(0.6);
+}
+
+.up_button{
+  padding: 5px;
+  top: 90%;
+  transition: all 0.5s;
+}
+.up_button img{
+  width: 100%;
+  transition: all 0.5s;
+}
+.button_hide{
+  visibility: hidden;
+  opacity: 0;
+}
+.button_show{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*--------------------------------------------------------------------------------------*/
+
+@media  screen and (min-width: 800px) {     /*! DESKTOP MODE */
+  .social_links{
+    top: 40%;
+  }
+}

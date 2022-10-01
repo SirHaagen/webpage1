@@ -1,0 +1,66 @@
+
+
+.slider{
+  width: 98.5vw;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.slider::before,
+.slider::after{
+  content: '';
+  width: 8vw;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+  /* configuración de las cajas de las sombras laterales */
+}
+.slider::before{
+  background-image: linear-gradient(to right, #ffffff 0%, transparent 70%);
+}
+.slider::after{
+  background-image: linear-gradient(to left, #ffffff 0%, transparent 70%);
+  left: 91vw; /* para posicionar la sombra al final del carrusel, lado derecho */
+}
+
+.slider-track{
+  display: flex;
+  width: calc(200px*18); /*! AAA */
+  animation: scroll 20s linear infinite;
+  /*18 es el resultado de la cantidad de logos (9) x 2 porque está 2 veces */
+}
+@keyframes scroll{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-200px*9)); /*! BBB */
+  }
+  /*Es 9 porque es la cantidad de logos (sin repetir) */
+}
+.slider-track:hover{
+  animation-play-state: paused;
+  /*! OJO CON ESTA PROPIEDAD, QUE ES PARA PAUSAR EL SCROLL */
+  /* Se pone acá porque en .slider-track es donde se configuró la animación de sroll */
+}
+
+.slide{
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 15px;
+  user-select: none;
+  /*! El width de cada caja de ìcono debe ser igual en AAA y en BBB (200px en este caso)*/
+}
+
+.slide a img{
+  width: 100%;
+  /* filter: saturate(0%); <------Si quiero los logos a escala de grises */
+  transition: transform 1s;
+}
+.slide a img:hover{
+  transform: scale(1.2);
+}
