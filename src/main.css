@@ -1,7 +1,4 @@
 
-:root{
-  --blue_color: #0066cc;
-}
 *{
   box-sizing: border-box;
   margin: 0;
@@ -11,6 +8,18 @@
 .content{
   position: absolute;
   top: 50px;
+}
+
+body{
+  --blue_color: #0066cc;
+  --light_gray: #dddddd;
+  --text_color: #000000;
+}
+.dark_mode{
+  background-color: #000000;
+  --blue_color: #0066cc;
+  --light_gray: #dddddd;
+  --text_color: #ffffff;
 }
 
 /*--------------------------------------Top Banner */
@@ -32,7 +41,10 @@
   width: 100%;
   padding-top: 20px;
   text-align: center;
-  background-color: #dddddd;
+  background-color: var(--light_gray)
+}
+.content_gallery h1{
+  color: var(--text_color);
 }
 .gallery_grid img{
   width: 100%;
@@ -52,6 +64,9 @@
   background-image: url("./text_background1.jpg");
   background-attachment: fixed;
   text-align: center;
+}
+.sections h2{
+  color: var(--text_color);
 }
 .content_section img{
   width: 100%;

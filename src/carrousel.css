@@ -3,6 +3,7 @@
 .slider{
   width: 98.5vw;
   height: 250px;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   overflow: hidden;
