@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
     <title>PÁGINA GENÉRICA 1</title>
@@ -12,7 +12,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
-  <body>
+  <body class="scrollable" style="overflow-y: hidden;">
 
     <header>
 
@@ -21,8 +21,9 @@
       <div class="nav_bar"><img src="./images/menu-bar.png" class="navbar"></div>
 
       <div class="nav_color">
+        <p class="user_name"></p>
         <a href="#" class="light"><img src="./images/sun.png" alt="light/dark"></a>
-        <a href="#" class="dark" hidden><img src="./images/moon.png" alt="light/dark"></a>
+        <a href="#" class="dark"hidden><img src="./images/moon.png" alt="light/dark"></a>
       </div>
 
       <nav class="main-nav">
@@ -65,14 +66,15 @@
 
     <div class="contenedor_modal">      <!--NAME REQUEST MODAL-->
       <div class="name_modal">
-        <h3>Por favor indique su nombre:</h3>
-        <input type="text" class="modal_name" placeholder="Su nombre">
-        <button class="getName">Aceptar</button>
+        <h3>Please, enter your name:</h3>
+        <input type="text" class="modal_name" placeholder="Your name here">
+        <input type="submit" class="getName" value="Accept">
+        <p class="modal_error"></p>
       </div>
     </div>
 
 
-    <div class="content">
+    <div class="content light_mode">
 
       
       <div class="social_links">
@@ -81,9 +83,6 @@
         <div><a href="#"><img src="./images/twitter-icon.svg" alt="twitter" class="social_icon"></a></div>
         <div><a href="#"><img src="./images/youtube-icon2.svg" alt="youtube" class="social_icon"></a></div>
       </div>
-
-
-      
 
 
       <div class="top_banner">
@@ -147,8 +146,6 @@
       </div>
       <include src="./src/carrousel.html"></include>
 
-      <div class="empty"></div>
-
 
       <a href="#principio" class="up_button button_hide"><img src="./images/double-up-arrow.png"></a>
     
@@ -162,7 +159,6 @@
       </footer>
       
     </div>
-
 
 
     <script type="text/javascript" src="./src/main.js"></script>

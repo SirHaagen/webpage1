@@ -10,9 +10,7 @@
 
 :+1:
 
-*The webpage has responsive. The webpage has a minimalistic and elegant menu, a main section, a gallery section, 3 column of articles, a cool carrousel and a footer.*
-
-> This project is still under construction. Soon implementing funcionalities like localStorage, Cookies, dark and light mode, and more...
+*The webpage has responsive. The webpage has a minimalistic and elegant menu, a main section, a gallery section, 3 column of articles, a cool carrousel and funcionalities like localStorage, dark and light mode.*
 
 **Working so far:**
 
@@ -26,3 +24,4 @@
 
 ### Javascript:
 * fetch
+* LocalStorage
