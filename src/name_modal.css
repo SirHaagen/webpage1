@@ -1,0 +1,48 @@
+
+
+.contenedor_modal{
+  width: 100%;
+  height: 100vh;
+  background-color: #aaaaaaa8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: show_modal 1s linear;
+  z-index: 1000000;
+}
+.name_modal{
+  background-color: #dddddd;
+  padding: 50px;
+  border-radius: 10px;
+}
+.name_modal h3{
+  margin-bottom: 10px;
+}
+.name_modal input, .name_modal button{
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #aaaaaa;
+}
+.name_modal .getName{
+  cursor: pointer;
+}
+.name_modal .getName:active{
+  background-color: #777777;
+  color: #ffffff
+}
+.name_modal .modal_error{
+  font-size: 0.8em;
+  color: #ff0000;
+}
+
+@keyframes show_modal {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+@keyframes hide_modal {
+  from{opacity: 1;}
+  to{opacity: 0;}
+}
